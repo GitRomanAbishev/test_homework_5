@@ -22,6 +22,3 @@ def filling_date():
     browser.element('#react-select-3-option-0').click()
     browser.element('#city').click()
     browser.element('#react-select-4-option-0').click()
-    # Скажите у нас будет обяъснения как получить селекторы для элементов которые исчезают?
-    #В этом задании для элементов из выпадающего списка мне помог коллега фронтендер дергуть id элементов
-    #У меня не получалось
