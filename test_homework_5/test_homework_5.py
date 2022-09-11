@@ -8,5 +8,6 @@ def test_submit_date():
     browser.element('#submit').click()
     browser.element('#example-modal-sizes-title-lg').vizibale = True
     # А это работает вообще? я проверяю видимость элемента?
+    # Все данные для заполнения описаны в функции filling_date и импортированны
     # Скажите, нормально, что я все данные ввожу в функции за приделами теста?
 
