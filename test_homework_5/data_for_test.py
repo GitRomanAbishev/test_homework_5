@@ -29,7 +29,7 @@ def filling_date():
 
 # Эту часть честно признаюсь подсмотрел, так как не разобрался, но когда посомтрел разобрался!
 def check_form_data():
-    #Так явно лучше
+    # Так явно лучше
     browser.all('.modal-body td:nth-child(even)').should(have.texts(
         'Name Last Name',
         'some@Email.ru',
