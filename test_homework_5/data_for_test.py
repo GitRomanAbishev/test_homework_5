@@ -26,17 +26,31 @@ def filling_date():
     browser.element('#city').click()
     browser.element('#react-select-4-option-0').click()
 
-#Эту часть честно признаюсь подсмотрел, так как не разобрался, но когда посомтрел разобрался!
+
+# Эту часть честно признаюсь подсмотрел, так как не разобрался, но когда посомтрел разобрался!
 def check_form_data():
-    browser.element('#example-modal-sizes-title-lg').should(be.visible).should(
-        have.text('Thanks for submitting the form'))
-    browser.element('.table-responsive').should(have.text('Name' + ' ' + 'Last Name'))
-    browser.element('.table-responsive').should(have.text('some@Email.ru'))
-    browser.element('.table-responsive').should(have.text('Male'))
-    browser.element('.table-responsive').should(have.text('7963123458'))
-    browser.element('.table-responsive').should(have.text('15 April,2021'))
-    browser.element('.table-responsive').should(have.text('Maths'))
-    browser.element('.table-responsive').should(have.text('Sports, Reading, Music'))
-    browser.element('.table-responsive').should(have.text('test_picture.png'))
-    browser.element('.table-responsive').should(have.text('Some address'))
-    browser.element('.table-responsive').should(have.text('NCR Delhi'))
+    #Так явно лучше
+    browser.all('.modal-body td:nth-child(even)').should(have.texts(
+        'Name Last Name',
+        'some@Email.ru',
+        'Male',
+        '7963123458',
+        '15 April,2021',
+        'Maths',
+        'Sports, Reading, Music',
+        'test_picture.png',
+        'Some address',
+        'NCR Delhi'
+    ))
+    # browser.element('#example-modal-sizes-title-lg').should(be.visible).should(
+    #     have.text('Thanks for submitting the form'))
+    # browser.element('.table-responsive').should(have.text('Name' + ' ' + 'Last Name'))
+    # browser.element('.table-responsive').should(have.text('some@Email.ru'))
+    # browser.element('.table-responsive').should(have.text('Male'))
+    # browser.element('.table-responsive').should(have.text('7963123458'))
+    # browser.element('.table-responsive').should(have.text('15 April,2021'))
+    # browser.element('.table-responsive').should(have.text('Maths'))
+    # browser.element('.table-responsive').should(have.text('Sports, Reading, Music'))
+    # browser.element('.table-responsive').should(have.text('test_picture.png'))
+    # browser.element('.table-responsive').should(have.text('Some address'))
+    # browser.element('.table-responsive').should(have.text('NCR Delhi'))
